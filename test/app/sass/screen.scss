@@ -1,0 +1,192 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "globalvariables";
+
+/* where it starts */
+
+body{
+	background: #fff;
+	font-family: 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+div,li,ul,p{
+	box-sizing: border-box;
+}
+.bar-title{
+	height: 64px;
+	background: $sulitblue;
+	border-bottom: 1px solid $sulitblue;
+	.title{
+		top: 20px;
+		font-weight: 300;
+		letter-spacing: 1px;
+	}
+}
+.bar-title [class*="button"]{
+	margin-top: 20px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	font-size: 0.9em;
+	background: transparent;
+border: none;
+}
+.bar-title ~ .content{
+	top: 64px;
+}
+.bar-header-secondary{
+	top: 65px;
+}
+
+
+.header{
+	font-size: 14pt;
+	display: block;
+	padding: 5px 10px 5px;
+	font-weight: normal;
+}
+.slider.popular{
+	height: 150px;
+}
+.slider{
+	.left-ad{
+		position: relative;
+		background-color: #333;
+		height: 150px;
+		float: left;
+		width: 50%;
+		white-space: normal;
+	}
+	.right-ad{
+		position: relative;
+		background-color: #999;
+		height: 150px;
+		float: right;
+		width: 50%;
+		white-space: normal;
+	}
+}
+.ad-details{
+	background: rgba(255,255,255,0.85);
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	padding: 5px 5px 0px 5px;
+
+	a{
+		display: block;
+		word-wrap: break-word;
+		.ad-title{
+			max-height: 32px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+.premium{
+	background: rgba(255,255,204,0.85);
+}
+.list{
+	margin-bottom: 0px;
+	padding: 0px;
+
+}
+	.list-divider{
+		font-weight: 500;
+		color: #666;
+		background-color: transparent;
+		margin: 0px;
+		border: 0px;
+		font-size: 0.8em;
+		padding: 5px 10px;
+	}
+
+.ad-image{
+	background-size: cover !important;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+.price{
+	color: #900;
+	font-weight: 500;
+	font-size: 0.8em;
+}
+.ad-title{
+	line-height: 1.2em;
+	font-weight: normal
+}
+.recently-viewed-ad{
+	background: #333;
+	height: 180px;
+}
+.subheader{
+font-weight: 500;
+color: #666;
+background-color: transparent;
+margin: 0px;
+border: 0px;
+font-size: 0.8em;
+padding: 0px 10px;
+line-height: 1em;
+font-weight: 400;
+}
+.content-section{
+	padding: 0px 10px 5px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #e1e1e1;
+	.header{
+		padding: 0px;
+	}
+	.subheader{
+		padding: 0px 0px 5px 0px;
+	}
+}
+.clearfix{
+	clear: both;
+}
+.snap-drawers, .snap-drawer{
+	padding-top: 20px;
+	background: #333;
+	color: #fff;
+	.list{
+		background: #333;
+		li{
+			font-size: 0.85em;
+			border: 0px;
+			padding-left: 44px;
+			a{
+				padding-left: 0px;
+				padding-right: 0px;
+				border-bottom: 1px solid #444;
+			}
+		}
+	}
+	.list-divider{
+		background: #333;
+		color: #fff;
+		text-transform: uppercase;
+		text-shadow: none;
+		font-weight: 400;
+		letter-spacing: 1px;
+		box-shadow: none;
+		padding-left: 10px !important;
+		border-bottom: 1px solid #444 !important;
+	}
+}
+.tab-label{
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #333;
+}
+.bar-tab{
+	background: #fff;
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>Ratchet template page</title>
+
+		<!-- Sets initial viewport load and disables zooming	-->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<!-- Set Apple icons for when prototype is saved to home screen -->
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="touch-icons/apple-touch-icon-57x57.png">
+
+		<!-- Include the base Snap.js CSS -->
+		<link rel="stylesheet" href="css/snap.css">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+		<!-- Include the compiled Ratchet CSS -->
+		<link rel="stylesheet" href="../../dist/ratchet.css">
+		<link href="css/screen.css" rel="stylesheet" type="text/css" />
+		<!-- Include the compiled Ratchet JS -->
+		<script src="../../dist/ratchet.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Intro paragraph styles. Delete once you start using this page -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var viewportWidth = $(window).width();
+			alert(viewportWidth/2);
+			$('.fullwidth').css('width', viewportWidth);
+			$('.halfwidth').css('width', viewportWidth/2)
+			/*$('#search').focus(function(){
+				$('#search').css('width', '100');
+				$('.button').hide();
+			});
+			$('#search').focusout(function(){
+				$('.button').show();
+			});*/
+			
+		});		
+	</script>
+		<style type="text/css">
+			.snap-drawers .list{margin: 0;}
+
+			.welcome {
+				line-height: 1.5;
+				color: #555;
+			}
+			h2{
+				padding: 15px;
+				font-weight: normal;
+				font-size: 36px;
+			}
+		</style>
+
+	</head>
+	<body>
+	<!--- snap js drawers -->
+	<div class="snap-drawers">
+		<div class="snap-drawer snap-drawer-left" id="left-drawer">
+			<ul class="list">
+			  <li class="list-divider">Categories</li>
+			  <li><a href="../default.html" data-ignore="push">Cars and Automotives</a></li>
+			  <li><a href="../noDrag.html" data-ignore="push">Real Estate</a></li>
+			  <li><a href="../rightDisabled.html" data-ignore="push">Phones</a></li>
+			  <li><a href="../skinnyThreshold.html" data-ignore="push">Pets</a></li>
+			  <li><a href="../toggles.html" data-ignore="push">Bags, Clothing and Accessories</a></li>
+			  <li><a href="../classNames.html" data-ignore="push">Sports and Hobbies</a></li>
+	          <li><a href="../expand.html" data-ignore="push">Computers</a></li>
+	          <li><a href="../settings.html" data-ignore="push">Health and Beauty</a></li>
+			  <li><a href="template.html" data-ignore="push">Electronics</a></li>
+			  <li><a href="template.html" data-ignore="push">Toys and Video Games</a></li>
+			  <li><a href="template.html" data-ignore="push">Furniture</a></li>
+			  <li><a href="template.html" data-ignore="push">Baby Stuff</a></li>
+			   <li><a href="template.html" data-ignore="push">Musical Instruments</a></li>
+			    <li><a href="template.html" data-ignore="push">Services</a></li>
+			     <li><a href="template.html" data-ignore="push">View All</a></li>
+			</ul>
+		</div>
+		<div class="snap-drawer snap-drawer-right" id="right-drawer">
+			<ul class="list">
+			  <li>List item 1 <span class="chevron"></span></li>
+			  <li>List item 2 <span class="chevron"></span></li>
+			  <li>List item 3 <span class="chevron"></span></li>
+			  <li>List item 4 <span class="chevron"></span></li>
+			  <li>List item 5 <span class="chevron"></span></li>
+			  <li>List item 6 <span class="chevron"></span></li>
+			  <li>List item 7 <span class="chevron"></span></li>
+			  <li>List item 8 <span class="chevron"></span></li>
+			  <li>List item 9 <span class="chevron"></span></li>
+			  <li>List item 10 <span class="chevron"></span></li>
+			  <li>List item 1 <span class="chevron"></span></li>
+			  <li>List item 12 <span class="chevron"></span></li>
+			  <li>List item 13 <span class="chevron"></span></li>
+			  <li>List item 14 <span class="chevron"></span></li>
+			  <li>List item 15 <span class="chevron"></span></li>
+			  <li>List item 16 <span class="chevron"></span></li>
+			  <li>List item 17 <span class="chevron"></span></li>
+			  <li>List item 18 <span class="chevron"></span></li>
+			  <li>List item 19 <span class="chevron"></span></li>
+			  <li>List item 20 <span class="chevron"></span></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="content" class="snap-content">
+<!-- <nav class="bar-tab">
+  <ul class="tab-inner">
+    <li class="tab-item active">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-home.png">
+        <div class="tab-label">Home</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-profile.png">
+        <div class="tab-label">Post an Ad</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-messages.png">
+        <div class="tab-label">Messages</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <img class="tab-icon" src="img/icon-hamburger.png">
+        <div class="tab-label">History</div>
+      </a>
+    </li>
+  </ul>
+</nav> -->
+		<!-- Make sure all your bars are the first things in your <body> -->
+		<header class="bar-title">
+			<button class="button" id="toggle-left"> Menu</button>
+			<h1 class="title">Sulit.com.ph</h1>
+			<button class="button" id="toggle-right">Sell</button>
+		</header>
+	
+		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+		<div class="content">
+<!--			<h2 class="header">Recently Viewed Ad</h2>
+			<section class="recently-viewed-ad ad-image" style="background-image: url(img/ads/zero.jpg);">
+				<div class="ad-details">
+					<a href="#">
+						<h4 class="ad-title">Bandai D-Arts Rockman X - Black Zero</h4>
+						<div class="price">&#8369; 2650.00</div>
+					</a>
+				</div>
+			</section>
+			<h2 class="header">Popular Searches</h2>
+			<h3 class="list-divider">In Toyota Fortuner</h3>
+
+			<div class="slider popular">
+			<ul>
+				<li>
+					<div class="left-ad ad-image" style="background-image: url(img/ads/toyotafortuner-1.jpg);">
+						<div class="ad-details">
+							<a href="">
+								<h4 class="ad-title">
+									2008 Toyota Fortuner 5Door - 2.7 G, All Original
+								</h4>
+								<div class="price">&#8369;845,000.00</div>
+							</a>
+						</div>
+					</div>
+					<div class="right-ad ad-image" style="background-image: url(img/ads/toyotafortuner-2.jpg);">
+						<div class="ad-details" >
+							<a href="">
+								<h4 class="ad-title">2007 Toyota Fortuner 5Door - G, All Original</h4>
+								<div class="price">&#8369;10000</div>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="left-ad ad-image" style="background-image: url(img/ads/toyotafortuner-1.jpg);">
+						<div class="ad-details">
+							<a href="">
+								<h4 class="ad-title">
+									2008 Toyota Fortuner 5Door - 2.7 G, All Original
+								</h4>
+								<div class="price">&#8369;845,000.00</div>
+							</a>
+						</div>
+					</div>
+					<div class="right-ad ad-image" style="background-image: url(img/ads/toyotafortuner-2.jpg);">
+						<div class="ad-details" >
+							<a href="">
+								<h4 class="ad-title">2007 Toyota Fortuner 5Door - G, All Original</h4>
+								<div class="price">&#8369;10000</div>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="left-ad ad-image" style="background-image: url(img/ads/toyotafortuner-1.jpg);">
+						<div class="ad-details">
+							<a href="">
+								<h4 class="ad-title">
+									2008 Toyota Fortuner 5Door - 2.7 G, All Original
+								</h4>
+								<div class="price">&#8369;845,000.00</div>
+							</a>
+						</div>
+					</div>
+					<div class="right-ad ad-image" style="background-image: url(img/ads/toyotafortuner-2.jpg);">
+						<div class="ad-details" >
+							<a href="">
+								<h4 class="ad-title">2007 Toyota Fortuner 5Door - G, All Original</h4>
+								<div class="price">&#8369;10000</div>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<h3 class="list-divider">In iPhone</h3>
+		<div class="slider popular">
+			<ul>
+				<li>
+					<div class="left-ad halfwidth ad-image" style="background-image: url(img/ads/iphonecases.jpg);">
+						<div class="ad-details premium">
+							<a href="">
+								<h4 class="ad-title">Supplier personalized iphone, apple, samsung, blackberry cases</h4>
+								<div class="price">&#8369;150</div>
+							</a>
+						</div>
+					</div>
+					<div class="right-ad halfwidth ad-image" style="background-image: url(img/ads/iphone3GS.jpg);">
+						<div class="ad-details">
+							<a href="">
+								<h4 class="ad-title">iPhone 3GS 32gb</h4>
+								<div class="price">&#8369;5500</div>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="left-ad halfwidth ad-image" style="background-image: url(img/ads/iphonecases.jpg);">
+						<div class="ad-details">
+							<a href="">
+								<h4 class="ad-title">Supplier personalized iphone, apple, samsung, blackberry cases</h4>
+								<div class="price">&#8369;150</div>
+							</a>
+						</div>
+					</div>
+					<div class="right-ad halfwidth ad-image" style="background-image: url(img/ads/iphone3GS.jpg);">
+						<div class="ad-details">
+							<a href="">
+								<h4 class="ad-title">iPhone 3GS 32gb</h4>
+								<div class="price">&#8369;5500</div>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div> -->
+		<ul class="list">
+			<li class="list-divider">Search in: </li>
+			<li>
+				<a href="">Mega Manila</a>
+			</li>
+			<li>
+				<a href="">Northern Luzon</a>
+			</li>
+			<li>
+				<a href="">Southern Luzon</a>
+			</li>
+			<li>
+				<a href="">Cebu</a>
+			</li>
+			<li>
+				<a href="">Davao</a>
+			</li>
+		</ul>
+	
+		</div>
+	</div>
+	<script type="text/javascript" src="javascripts/snap.js"></script>
+	<script type="text/javascript">
+	
+		var 
+		
+		// Helper
+		$ = function(id){
+			return document.getElementById(id);
+		},
+		
+		// Instance
+		snapper = new Snap({
+			element: document.getElementById('content')
+		}),
+		
+		// 
+		UpdateDrawers = function(){
+			var state = snapper.state(),
+				towards = state.info.towards,
+				opening = state.info.opening;
+			if(opening=='right' && towards=='left'){
+				$('right-drawer').classList.add('active-drawer');
+				$('left-drawer').classList.remove('active-drawer');
+			} else if(opening=='left' && towards=='right') {
+				$('right-drawer').classList.remove('active-drawer');
+				$('left-drawer').classList.add('active-drawer');
+			}
+		};
+		
+		snapper.on('drag', UpdateDrawers);
+		snapper.on('animating', UpdateDrawers);
+		snapper.on('animated', UpdateDrawers);
+		
+		$('toggle-left').addEventListener('click', function(){
+			snapper.open('left');
+		});
+		
+		$('toggle-right').addEventListener('click', function(){
+			snapper.open('right');
+		});
+		
+	</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    </body>
+</html>

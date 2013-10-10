@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie finder</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../dist/touch-icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../dist/touch-icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../dist/touch-icons/apple-touch-icon-57x57.png">
+
+    <link rel="stylesheet" href="../../dist/ratchet.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="../../dist/ratchet.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<style type="text/css">
+			.snap-drawers .list{margin: 0;}
+
+			.welcome {
+				line-height: 1.5;
+				color: #555;
+			}
+			h2{
+				padding: 15px;
+				font-weight: normal;
+				font-size: 36px;
+			}
+		</style>
+  </head>
+  <body>
+<div class="snap-drawers">
+		<div class="snap-drawer snap-drawer-left" id="left-drawer">
+			<ul class="list">
+              <h2>Snap.js</h2>
+			  <li class="list-divider">Share</li>
+			  <li>
+			  	<div class="demo-social">
+        		  <iframe src="http://ghbtns.com/github-btn.html?user=jakiestfu&amp;repo=Snap.js&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="120" height="20"></iframe>
+				</div>
+			  </li>
+			  <li class="list-divider">Demos</li>
+			  <li><a href="../default.html" data-ignore="push">Default</a></li>
+			  <li><a href="../noDrag.html" data-ignore="push">No Drag</a></li>
+			  <li><a href="../rightDisabled.html" data-ignore="push">Right Disabled</a></li>
+			  <li><a href="../skinnyThreshold.html" data-ignore="push">Skinny Threshold</a></li>
+			  <li><a href="../toggles.html" data-ignore="push">Toggles</a></li>
+			  <li><a href="../classNames.html" data-ignore="push">Class Names</a></li>
+	          <li><a href="../expand.html" data-ignore="push">Expanding</a></li>
+	          <li><a href="../settings.html" data-ignore="push">Settings</a></li>
+			  <li><a href="template.html" data-ignore="push">Ratchet</a></li>
+			</ul>
+		</div>
+		<div class="snap-drawer snap-drawer-right" id="right-drawer">
+			<ul class="list">
+			  <li>List item 1 <span class="chevron"></span></li>
+			  <li>List item 2 <span class="chevron"></span></li>
+			  <li>List item 3 <span class="chevron"></span></li>
+			  <li>List item 4 <span class="chevron"></span></li>
+			  <li>List item 5 <span class="chevron"></span></li>
+			  <li>List item 6 <span class="chevron"></span></li>
+			  <li>List item 7 <span class="chevron"></span></li>
+			  <li>List item 8 <span class="chevron"></span></li>
+			  <li>List item 9 <span class="chevron"></span></li>
+			  <li>List item 10 <span class="chevron"></span></li>
+			  <li>List item 1 <span class="chevron"></span></li>
+			  <li>List item 12 <span class="chevron"></span></li>
+			  <li>List item 13 <span class="chevron"></span></li>
+			  <li>List item 14 <span class="chevron"></span></li>
+			  <li>List item 15 <span class="chevron"></span></li>
+			  <li>List item 16 <span class="chevron"></span></li>
+			  <li>List item 17 <span class="chevron"></span></li>
+			  <li>List item 18 <span class="chevron"></span></li>
+			  <li>List item 19 <span class="chevron"></span></li>
+			  <li>List item 20 <span class="chevron"></span></li>
+			</ul>
+		</div>
+	</div>
+  <header class="bar-title">
+  <a class="button"><i class="icon-2x icon-reorder"></i></a>
+<!--    <h1 class="title">-->
+    <form>
+      <input id="search" type="search" placeholder="Ano Hanap Mo?">
+    </form>
+    <!-- </h1>-->
+    
+  <a class="button post-an-ad">Post an Ad</a>
+  </header>
+  <!-- 
+  <nav class="bar-standard bar-header-secondary">
+    <form>
+      <input type="search" placeholder="Search">
+    </form>
+  </nav> -->
+
+<!--  <nav class="bar-tab">
+    <ul class="tab-inner">
+      <li class="tab-item active">
+        <a href="index.html" data-transition="fade">
+          <img class="tab-icon" src="../../docs/img/icon-hamburger.png">
+          <div class="tab-label">Search</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="theaters.html" data-transition="fade">
+          <img class="tab-icon" src="../../docs/img/icon-hamburger.png">
+          <div class="tab-label">Post a Free Ad</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="settings.html" data-transition="fade">
+          <img class="tab-icon" src="../../docs/img/icon-hamburger.png">
+          <div class="tab-label">Messages</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="settings.html" data-transition="fade">
+          <img class="tab-icon" src="../../docs/img/icon-hamburger.png">
+          <div class="tab-label">Browsing History</div>
+        </a>
+      </li>
+      <li class="tab-item">
+        <a href="settings.html" data-transition="fade">
+          <img class="tab-icon" src="../../docs/img/icon-hamburger.png">
+          <div class="tab-label"></div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+-->
+	<div class="content">
+		<section id="memberdetails" class="content-section">
+			<h2 class="header">mllacsamana</h2>
+			<h3 class="subheader">Mark Lester Coscolluela Lacsamana</h3> 
+			<img src="" width="80" height="80" alt="" class="user-avatar"/>
+			<div id="user-details">
+				<strong>Last Sign In</strong> September 20, 2013<br />
+				<strong>Last Access</strong> October 7, 2013<br />
+				<strong>Feedback</strong><br />
+				<div class="feedbackscore">No Feedback Yet</div>
+			</div>
+			<div class="clearfix"></div>
+		</section>
+		<ul class="segmented-controller">
+		<li class="active">
+		<a href="#item1">Thing one</a>
+		</li>
+		<li>
+		<a href="#item2">Thing two</a>
+		</li>
+		</ul>
+		<ul class="inset list">
+		<li id="item1" class="segmented-controller-item active">
+		Item 1
+		</li>
+		<li id="item2" class="segmented-controller-item">
+		Item 2
+		</li>
+		<li id="item3" class="segmented-controller-item">
+		Item 3
+		</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/* var viewportWidth = $(window).width();
+			alert(viewportWidth/2);
+			$('.fullwidth').css('width', viewportWidth);
+			$('.halfwidth').css('width', viewportWidth/2)*/
+			$('#search').focus(function(){
+				$('.button').hide();
+			});
+			$('#search').focusout(function(){
+				$('.button').show();
+			});
+		});		
+	</script>
+  </body>
+</html
