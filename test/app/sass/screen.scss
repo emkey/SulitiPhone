@@ -9,33 +9,60 @@
 /* where it starts */
 
 body{
-	background: #fff;
+	background: #f8f8f8;
 	font-family: 'Helvetica Neue', sans-serif;
 	font-weight: 300;
 	font-size: 1em;
 	line-height: 1.5em;
 }
-
+.content{
+	background: #f8f8f8;
+}
 div,li,ul,p{
 	box-sizing: border-box;
 }
 .bar-title{
 	height: 64px;
 	background: $sulitblue;
-	border-bottom: 1px solid $sulitblue;
+	border-bottom: 0px solid $sulitblue;
+	box-sizing: border-box;
+	padding-left: 0px; 
+	padding-right: 0px;
+	border-bottom: 1px solid #e1e1e1;
+	@media 
+	(-webkit-min-device-pixel-ratio: 2), 
+	(min-resolution: 192dpi) { 
+	    /* Retina-specific stuff here */
+	    border: 0px;
+	    box-shadow: 0 1px 1px -1px rgba(0, 0, 0, .5);
+	}
+	
 	.title{
 		top: 20px;
 		font-weight: 300;
 		letter-spacing: 1px;
+		height: 43px;
+	}
+	.logo{
+		background-image: url('../img/assets/sulit-logo-white.png');
+		background-size: auto 70%;
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-position-y: center;
+		text-indent: -9999px;
+		overflow: hidden;
+		
 	}
 }
 .bar-title [class*="button"]{
-	margin-top: 20px;
-	font-weight: 300;
-	letter-spacing: 1px;
-	font-size: 0.9em;
 	background: transparent;
-border: none;
+	box-shadow: 0px 0px 0px black;
+	border: 0px;
+	margin-top: 20px;
+	text-shadow: 0px 0px 0px;
+	font-size: 12pt;
+	font-weight: 200;
+	letter-spacing: 1px;
 }
 .bar-title ~ .content{
 	top: 64px;
@@ -43,7 +70,9 @@ border: none;
 .bar-header-secondary{
 	top: 65px;
 }
-
+.location-finder{
+	padding: 10px 10px 0px;
+}
 
 .header{
 	font-size: 14pt;
@@ -98,17 +127,33 @@ border: none;
 .list{
 	margin-bottom: 0px;
 	padding: 0px;
-
-}
-	.list-divider{
-		font-weight: 500;
-		color: #666;
-		background-color: transparent;
-		margin: 0px;
+	border-top: 0px;
+	li{
 		border: 0px;
-		font-size: 0.8em;
-		padding: 5px 10px;
+		background-color: transparent;
+		background: repeat-x bottom left
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e1e1e1' x='0' y='0' width='1' height='0.5'/></svg>");
+		a{
+			background: repeat-x bottom left
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e1e1e1' x='0' y='0' width='1' height='0.5'/></svg>");
+		}
 	}
+}
+.list-divider{
+	font-weight: 500;
+	color: #666;
+	background: #f8f8f8 repeat-x bottom left
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#e1e1e1' x='0' y='0' width='1' height='0.5'/></svg>") !important;
+	margin: 0px;
+	border: 0px;
+	font-size: 0.8em;
+	padding: 5px 10px;
+	box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.5);
+	border-top: 0px !important;
+	border-bottom: 0px !important;
+	position: relative;
+	z-index: 3
+}
 
 .ad-image{
 	background-size: cover !important;
@@ -163,10 +208,13 @@ font-weight: 400;
 			font-size: 0.85em;
 			border: 0px;
 			padding-left: 44px;
+			background: transparent !important;
 			a{
 				padding-left: 0px;
 				padding-right: 0px;
-				border-bottom: 1px solid #444;
+				border-bottom: 0px solid #444;
+				background: transparent repeat-x bottom left
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect fill='#444' x='0' y='0' width='1' height='0.5'/></svg>") !important;
 			}
 		}
 	}
@@ -189,4 +237,40 @@ font-weight: 400;
 }
 .bar-tab{
 	background: #fff;
+}
+.icon{
+	font-family: 'FontAwesome';
+}
+.button-block{
+	margin: 10px 10px;
+	border: 0px;
+	background: $sulitgreen;
+	border-radius: 0.3em;
+	color: #fff;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-shadow: none !important;
+	box-shadow: 0px 0px 0px 0px !important;
+	&:hover{
+		background: lighten($sulitgreen, 5%);
+		color: #fff;
+	}
+}
+.sell-button{
+	background: #fc0 !important;
+	color: #333 !important;
+	border-radius: 5px;
+}
+.menu{
+padding-left: 5px !important;
+}
+.login{
+	margin: 10px 10px;
+	border-radius: 5px;
+}
+.facebook{
+	background: $sulitblue;
+	&:hover{
+		background: lighten($sulitblue, 10%);
+	}
 }
